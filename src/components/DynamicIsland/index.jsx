@@ -8,7 +8,11 @@ export default function Index() {
   const [expanded, setExpanded] = useState(false);
   const animation = () => {
     if (!expanded) {
-      animate("#plus", { rotate: 315 }, { duration: 0.5, ease: [0.76, 0, 0.24, 1] });
+      animate(
+        "#plus",
+        { rotate: 45 },
+        { duration: 0.5, ease: [0.76, 0, 0.24, 1] }
+      );
       animate(
         ".menu",
         { y: "100%" },
@@ -45,7 +49,11 @@ export default function Index() {
         }
       );
     } else {
-      animate("#plus", { rotate: -270 }, { duration: 0.5, ease: [0.76, 0, 0.24, 1] });
+      animate(
+        "#plus",
+        { rotate: -90 },
+        { duration: 0.5, ease: [0.76, 0, 0.24, 1] }
+      );
       animate(
         "#opacity",
         { opacity: 0 },
@@ -92,7 +100,7 @@ export default function Index() {
         // onClick={() => setExpanded(!expanded)}
       >
         <div
-          className="  bg-black  text-white  rounded-2xl w-[90%] mx-auto h-[30px]"
+          className="  bg-[#191919] text-[#E6E6E6]  rounded-2xl w-[90%] mx-auto h-[30px]"
           id="background"
         >
           <div className="flex flex-col w-full h-full ">
@@ -101,7 +109,7 @@ export default function Index() {
               id="opacity"
             >
               <Image src="/logo.svg" width={70} height={70} alt="logo" />
-              <button className="text-sm bg-white rounded-2xl text-black px-4 py-1 font-oswald">
+              <button className="text-sm bg-[#E6E6E6] rounded-2xl text-[#191919] px-4 py-1 font-oswald">
                 Book an appointment
               </button>
             </div>
@@ -164,7 +172,10 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="flex-1 text-xs flex flex-col justify-end px-5 py-3 mb-[35px] " onClick={() => animation()}>
+            <div
+              className="flex-1 text-xs flex flex-col justify-end px-5 py-3 mb-[35px] "
+              onClick={() => animation()}
+            >
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
                   testing@gaussjordan.com
@@ -198,13 +209,21 @@ export default function Index() {
 
       <section className="fixed bottom-5 flex items-center w-full opacito">
         <button
-          className=" cursor-pointer bg-black  text-white px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
+          className=" cursor-pointer bg-[#191919]  text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
           onClick={() => animation()}
         >
           <div className=" flex items-center text-sm font-bold">
             <span className=" pr-2">
-              <div className="overflow-hidden">   <Image src="/Diamond.svg" width={16} height={16} alt="Diamond" className="menu" /></div>
-           
+              <div className="overflow-hidden">
+                {" "}
+                <Image
+                  src="/Diamond.svg"
+                  width={16}
+                  height={16}
+                  alt="Diamond"
+                  className="menu"
+                />
+              </div>
             </span>
             <div className="overflow-hidden">
               <div className="menu">Öffnen Sie das Menü</div>
@@ -212,7 +231,13 @@ export default function Index() {
           </div>
           <div>
             <span>
-              <Image src="/plus.svg" width={18} height={18} alt="plus" id="plus" />
+              <Image
+                src="/plus.svg"
+                width={18}
+                height={18}
+                alt="plus"
+                id="plus"
+              />
             </span>
             <span></span>
           </div>
