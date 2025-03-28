@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de">
       <motion.body
-        className={`${inter.className} antialiased bg-[#E6E6E6] text-[#191919] `}
+        className={`${inter.className} antialiased bg-white text-[#191919] `}
       >
         {children}
         <DynamicIsland />
