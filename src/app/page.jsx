@@ -5,6 +5,7 @@ import Compare from "../components/Compare/index.jsx";
 import Marquee from "react-fast-marquee";
 import EmailForm from "../utils/EmailForm";
 import SectionTwo from "../components/SectionTwo/index.jsx";
+import Faq from "../components/FAQ/index.jsx";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       </Marquee> */}
 
       <ServicesCard />
+      <Faq/>
       {/* <EmailForm></EmailForm> */}
     </div>
   );

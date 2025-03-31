@@ -97,7 +97,7 @@ export default function Index() {
         // onClick={() => setExpanded(!expanded)}
       >
         <div
-          className="  bg-[#191919]   rounded-2xl w-[90%] mx-auto h-[40px]"
+          className="  bg-c-green   rounded-2xl w-[90%] mx-auto h-[40px]"
           id="background"
         >
           <div className="flex flex-col w-full h-full ">
@@ -206,7 +206,7 @@ export default function Index() {
 
       <section className="fixed bottom-3 flex items-center w-full opacito ">
         <button
-          className=" cursor-pointer bg-[#191919]  text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
+          className=" cursor-pointer bg-c-green  text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
           onClick={() => animation()}
         >
           <div className=" flex items-center text-sm font-bold">

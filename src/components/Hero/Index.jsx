@@ -45,7 +45,7 @@ export default function Index() {
           <Image src="/logo.svg" width={100} height={100} alt="Sam Logo" />
         </div>
 
-        <div className="font-oswald font-bold flex justify-center  text-center text-4xl w-full mt-20">
+        <div className="font-oswald font-bold flex justify-center  text-center text-4xl w-full mt-5">
           <motion.p
             initial="initial"
             variants={variants}

@@ -3,14 +3,20 @@ import Image from "next/image";
 export default function Index() {
   return (
     <div className="space-y-8 max-w-6xl mx-auto">
-      <div className="text-center font-oswald font-bold text-4xl flex gap-2 w-[90%] mx-auto items-end justify-between mt-8">
-        <div>
-          Unsere <span className="text-c-mid-green">Leistungen</span>
-        </div>
-        <div className="bg-c-mid-green h-fit p-2 rounded-full">
-          <SvgIcon2 />
-        </div>
+      <div className="text-center font-oswald font-bold text-4xl mx-auto mt-20">
+        <div>Unsere Leistungen</div>
       </div>
+
+      <Image
+        src="/illustration-3.svg"
+        alt="illustrative image for physiotherapy"
+        width={400}
+        height={500}
+      />
+      <p className="w-[90%] mx-auto text-sm mt-2 text-center">
+        Bei Sam Physiotherapie bieten wir individuell abgestimmte Physiotherapie
+        für jeden Patienten.
+      </p>
 
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
         <div className="flex gap-2  px-4 pt-8">
