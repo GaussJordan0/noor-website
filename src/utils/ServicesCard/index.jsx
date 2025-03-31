@@ -17,16 +17,16 @@ export default function Index() {
         Erfahrung in der muskuloskelettalen, neurologischen und respiratorischen
         Therapie und bietet ein breites Spektrum an Behandlungen an.
       </p>
-      <div className="bg-[#F3FAC0]  rounded-2xl w-[90%] mx-auto text-[#1A422B]">
+      <div className="bg-c-beige drop-shadow-xl backdrop-blur-[8px]  rounded-2xl w-[90%] mx-auto ">
         <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-xs py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
             Krankengymnastik
           </div>
-          <div className="border-1 text-xs py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-5xl px-4 pt-2 pb-6">
+        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
           Physiotherapy
         </h1>
         <hr />
@@ -42,61 +42,59 @@ export default function Index() {
         <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
           <p className="font-semibold flex gap-2">
             {" "}
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Funktionelle Bewegungsanalysen
           </p>
           <p className="font-semibold flex gap-2">
             {" "}
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Gezielte therapeutische Übungen
           </p>
           <p className="font-semibold flex gap-2">
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Gelenk- und Weichteilmobilisation
           </p>
           <p className="font-semibold flex gap-2">
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Strategien zur Verletzungsprävention
           </p>
         </div>
-        <div className="bg-c-green p-4 w-[90%] mx-auto text-c-light-green rounded-2xl pb-8 ">
-          <div className="font-oswald text-2xl">Physiotherapy</div>
-          <p className="text-xs mt-1 ">Click here to book your appointment</p>
-          <div className="rounded-2xl h-[200px] w-full mt-3 relative">
-            <Image
-              className="rounded-2xl object-cover"
-              src="/img-1.jpeg"
-              alt="Placeholder"
-              fill
-            />
-          </div>
-          <div className="px-4 mt-6 py-1 rounded-2xl font-oswald border-1  w-fit">
-            Book an appointment
-          </div>
+        <div className="relative h-[200px] w-[90%] mx-auto">
+        <Image
+          className="rounded-2xl object-cover"
+          src="/img-1.jpeg"
+          alt="Placeholder"
+          fill
+        />
         </div>
+
+
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
           01
         </div>
       </div>
 
-      <div className="bg-[#F3FAC0]  rounded-2xl w-[90%] mx-auto text-[#1A422B]">
+      {/* ---------------------------------------------------------------- */}
+
+
+      <div className="bg-c-beige drop-shadow-xl backdrop-blur-[8px]  rounded-2xl w-[90%] mx-auto ">
         <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-xs py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
             Krankengymnastik
           </div>
-          <div className="border-1 text-xs py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-5xl px-4 pt-2 pb-6">
+        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
           Physiotherapy
         </h1>
         <hr />
@@ -112,46 +110,41 @@ export default function Index() {
         <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
           <p className="font-semibold flex gap-2">
             {" "}
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Funktionelle Bewegungsanalysen
           </p>
           <p className="font-semibold flex gap-2">
             {" "}
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Gezielte therapeutische Übungen
           </p>
           <p className="font-semibold flex gap-2">
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Gelenk- und Weichteilmobilisation
           </p>
           <p className="font-semibold flex gap-2">
-            <span className="text-[#EC614B]">
+            <span className="text-c-mid-green">
               <SvgIcon />
             </span>
             Strategien zur Verletzungsprävention
           </p>
         </div>
-        <div className="bg-c-green p-4 w-[90%] mx-auto text-c-light-green rounded-2xl pb-8 ">
-          <div className="font-oswald text-2xl">Physiotherapy</div>
-          <p className="text-xs mt-1 ">Click here to book your appointment</p>
-          <div className="rounded-2xl h-[200px] w-full mt-3 relative">
-            <Image
-              className="rounded-2xl object-cover"
-              src="/img-1.jpeg"
-              alt="Placeholder"
-              fill
-            />
-          </div>
-          <div className="px-4 mt-6 py-1 rounded-2xl font-oswald border-1  w-fit">
-            Book an appointment
-          </div>
+        <div className="relative h-[200px] w-[90%] mx-auto">
+        <Image
+          className="rounded-2xl object-cover"
+          src="/img-1.jpeg"
+          alt="Placeholder"
+          fill
+        />
         </div>
+
+
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
           02
         </div>

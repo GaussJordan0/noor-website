@@ -4,28 +4,32 @@ import Waves from "../utils/Waves.jsx";
 import Compare from "../components/Compare/index.jsx";
 import Marquee from "react-fast-marquee";
 import EmailForm from "../utils/EmailForm";
+import SectionTwo from "../components/SectionTwo/index.jsx";
 
 export default function Home() {
   return (
     <div>
       <Hero />
       <div className="bg-c-green text-c-light-green mb-4">
-        <Marquee autoFill={true}>
+        {/* <Marquee autoFill={true}>
           <div className="font-oswald font-bold py-4 text-xl px-4">
             15+ JAHRE ERFAHRUNG
           </div>
-        </Marquee>
+        </Marquee> */}
       </div>
-      <Compare />
-      <Marquee autoFill={true} direction="right" className="bg-c-green text-c-light-green">
+
+      <SectionTwo />
+
+      {/* <Compare /> */}
+      {/* <Marquee autoFill={true} direction="right" className="bg-c-green text-c-light-green">
         {" "}
         <div className="font-oswald font-bold py-4 text-xl px-4">
         Umfassende Leistungen
         </div>
-      </Marquee>
+      </Marquee> */}
 
       <ServicesCard />
-      <EmailForm></EmailForm>
+      {/* <EmailForm></EmailForm> */}
     </div>
   );
 }

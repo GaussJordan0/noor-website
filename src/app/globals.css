@@ -2,10 +2,11 @@
 @theme {
     --font-oswald: "Oswald", sans-serif;
     --color-c-green: #1A422B;
-    --color-c-light-green: #F3FAC0;
+    --color-c-light-green: #F7FEE7;
     --color-c-black: #191919;
     --color-c-white: #FFFFFF;
     --color-c-mid-green: #7C9726;
+    --color-c-beige: #FDFFED;
 }
 
 body {
