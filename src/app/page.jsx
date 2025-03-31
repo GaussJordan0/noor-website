@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 import EmailForm from "../utils/EmailForm";
 import SectionTwo from "../components/SectionTwo/index.jsx";
 import Faq from "../components/FAQ/index.jsx";
+import About from "../components/About/index.jsx"
 
 export default function Home() {
   return (
@@ -31,6 +32,11 @@ export default function Home() {
 
       <ServicesCard />
       <Faq/>
+      <div className="mt-10">
+
+      <About/>
+      </div>
+      <div className="h-[200vh]"></div>
       {/* <EmailForm></EmailForm> */}
     </div>
   );

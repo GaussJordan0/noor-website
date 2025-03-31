@@ -2,7 +2,7 @@ import Accordion from "../../utils/Accordion/index.jsx";
 export default function index() {
   return (
     <div>
-      <div className="mx-auto text-4xl font-oswald mt-12 mb-6 text-center font-semibold">
+      <div className="mx-auto text-4xl font-oswald mt-12 mb-6 text-center font-semibold text-c-mid-green">
         Häufig gestellte Fragen
       </div>
       <div className="flex justify-between flex-col items-center gap-1">
@@ -31,7 +31,6 @@ export default function index() {
           title={"Wie oft sollte ich zur Physiotherapie kommen?"}
         />
       </div>
-      <div className="h-[200vh]"></div>
     </div>
   );
 }
