@@ -6,7 +6,7 @@ const Index = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(new Date().toLocaleTimeString("en-GB", { timeZone: "Europe/Berlin" }));
+      setTime(new Date().toLocaleTimeString("en-GB", { timeZone: "Europe/Berlin", hour12: true }));
     }, 1000);
     return () => clearInterval(interval);
   }, []);

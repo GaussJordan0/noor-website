@@ -30,7 +30,7 @@ const charVariants = {
   animate: { opacity: 1, filter: "blur(0px)", y:0, transition: { duration: 0.4 } },
   exit: { opacity: 0, filter: "blur(2px)", transition: { duration: 0.3 } },
 };
-export default function Index() {
+export default function index() {
   const [index, setIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
