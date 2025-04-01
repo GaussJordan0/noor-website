@@ -14,8 +14,7 @@ export default function Index() {
   });
   return (
     <div className=" w-[95%] lg:w-[85%] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 hover:group:border-opacity-0 gap-8">
-        <div>
+      <div>
           <h2 className="text-4xl font-oswald mx-auto text-center">Kontakt</h2>
           <p className="font-normal mt-4 mx-auto text-center text-sm max-w-[55ch]">
             Kontaktieren Sie uns, wenn Sie Hilfe benötigen oder Fragen zu
@@ -26,6 +25,8 @@ export default function Index() {
             *Pflichtfelder
           </p>
         </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 hover:group:border-opacity-0 gap-8">
+        
         <form className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:mt-0">
           <div className="md:col-start-1 md:col-end-2 text-xs text-black/70">
             Vorname*
@@ -164,18 +165,20 @@ export default function Index() {
               }
             />
           </div>
-          <button className="flex flex-row-reverse items-center gap-x-2 bg-c-green text-c-beige hover:bg-c-blue transition-colors px-4 py-2 rounded-md  w-fit md:col-start-2 hover:text-c-white duration-300">
-            <div className="font-bold text-xs">Meine Nachricht senden</div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor" // Inherits color from parent
-              width="18"
-              height="18"
-            >
-              <path d="M6 3v10h8l-3 3 1.5 1.5L18 12l-5.5-5.5L11 8l3 3H8V3H6z" />
-            </svg>
-          </button>
+          <div className="mx-auto flex justify-center">
+            <button className="flex flex-row-reverse items-center gap-x-2 bg-c-green text-c-beige hover:bg-c-mid-green transition-colors px-4 py-2 rounded-md  w-fit  hover:text-c-light-green duration-300">
+              <div className="font-bold text-xs">Meine Nachricht senden</div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor" // Inherits color from parent
+                width="18"
+                height="18"
+              >
+                <path d="M6 3v10h8l-3 3 1.5 1.5L18 12l-5.5-5.5L11 8l3 3H8V3H6z" />
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </div>

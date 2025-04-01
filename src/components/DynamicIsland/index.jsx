@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, useAnimate, stagger } from "motion/react";
 
 export default function Index() {
@@ -8,6 +8,11 @@ export default function Index() {
   const [expanded, setExpanded] = useState(false);
   const animation = () => {
     if (!expanded) {
+      animate(   ".bganimation",{
+        background: "#191919"
+      })
+     
+      
       animate(
         "#plus",
         { rotate: 45 },
@@ -49,6 +54,9 @@ export default function Index() {
         }
       );
     } else {
+      animate(   ".bganimation",{
+        background: "#7C9726"
+      })
       animate(
         "#plus",
         { rotate: -90 },
@@ -88,34 +96,33 @@ export default function Index() {
   };
 
   return (
-    
     <div ref={scope} className=" relative z-[99999] text-c-light-green">
-      
-      
       <section
         className="fixed bottom-3 flex justify-center w-full "
         // onClick={() => setExpanded(!expanded)}
       >
         <div
-          className="  bg-c-mid-green   rounded-2xl w-[90%] mx-auto h-[40px]"
+          className="  bg-c-mid-green bganimation rounded-2xl w-[90%] mx-auto h-[40px]"
           id="background"
         >
           <div className="flex flex-col w-full h-full ">
             <div
-              className="p-5 flex w-full justify-between items-center border-b  border-white/20 opacity-0"
+              className="p-5 flex w-full justify-end items-center border-b  border-white/20 opacity-0"
               id="opacity"
             >
-              <Image src="/logo.svg" width={70} height={70} alt="logo" />
-              <button className="text-sm bg-c-light-green text-c-green rounded-2xl px-4 py-1 font-oswald">
+              <button className="text-sm bg-c-light-green text-c-black drop-shadow rounded-lg px-4 py-1 font-oswald">
                 Book an appointment
               </button>
             </div>
 
             <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
               <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation"
+                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
-              ></div>
+              >
+                {" "}
+                <Image src="/home.jpg" className="object-cover rounded-md" fill alt="home menu image" />
+              </div>
 
               <div className="overflow-hidden">
                 <div
@@ -127,10 +134,13 @@ export default function Index() {
               </div>
             </div>
             <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
-              <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation"
+            <div
+                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
-              ></div>
+              >
+                {" "}
+                <Image src="/services.jpg" className="object-cover rounded-md" fill alt="home menu image" />
+              </div>
               <div className="overflow-hidden">
                 <div
                   className="font-semibold animated-text leading-[1]"
@@ -141,30 +151,40 @@ export default function Index() {
               </div>
             </div>
             <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
-              <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation"
+            <div
+                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
-              ></div>
-              <div className="overflow-hidden">
-                <div
-                  className=" font-semibold animated-text leading-[1]   "
-                  style={{ transform: "translateY(100%)" }}
-                >
-                  Doctolib
-                </div>
+              >
+                {" "}
+                <Image src="/contact.jpg" className="object-cover rounded-md" fill alt="home menu image" />
               </div>
-            </div>
-            <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
-              <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation"
-                style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
-              ></div>
               <div className="overflow-hidden">
                 <div
                   className=" font-semibold animated-text leading-[1]   "
                   style={{ transform: "translateY(100%)" }}
                 >
                   Contact
+                </div>
+              </div>
+            </div>
+            <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
+              <div
+                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
+                style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
+              >
+                <Image
+                  src="/doctolib.svg.png"
+                  className="rounded-2xl object-cover"
+                  fill
+                  alt="Sam Logo"
+                />
+              </div>
+              <div className="overflow-hidden">
+                <div
+                  className=" font-semibold animated-text leading-[1]   "
+                  style={{ transform: "translateY(100%)" }}
+                >
+                  Doctolib
                 </div>
               </div>
             </div>
@@ -175,7 +195,12 @@ export default function Index() {
             >
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
-                  testing@gaussjordan.com
+                  info@sam-physio.de
+                </div>
+              </div>
+              <div className="overflow-hidden">
+                <div className="w-fit font-bold animated-text">
+                  Address: Westfälische Str. 72 10709 Berlin
                 </div>
               </div>
               <div className="overflow-hidden">
@@ -183,19 +208,26 @@ export default function Index() {
                   Number: +40 123 456 XXX
                 </div>
               </div>
+
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
-                  Address: 123 Main St, City
+                  Phone: 030 44010654
                 </div>
               </div>
               <div className="overflow-hidden">
-                <div className="w-fit font-bold animated-text">Doctolib</div>
+                <div className="w-fit font-bold animated-text">
+                  Phone: 030 44013538
+                </div>
               </div>
               <div className="overflow-hidden">
-                <div className="w-fit font-bold animated-text">Social-1</div>
+                <div className="w-fit font-bold animated-text">
+                  Mobile: 0176 34984110
+                </div>
               </div>
               <div className="overflow-hidden">
-                <div className="w-fit font-bold animated-text">Social-2</div>
+                <div className="w-fit font-bold animated-text">
+                  Fax: 030 43744613
+                </div>
               </div>
             </div>
           </div>
@@ -206,7 +238,7 @@ export default function Index() {
 
       <section className="fixed bottom-3 flex items-center w-full opacito ">
         <button
-          className=" cursor-pointer bg-c-mid-green  text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
+          className=" cursor-pointer bg-c-mid-green bganimation text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
           onClick={() => animation()}
         >
           <div className=" flex items-center text-sm font-bold">
@@ -223,7 +255,9 @@ export default function Index() {
               </div>
             </span>
             <div className="overflow-hidden">
-              <div className="menu text-c-light-green py-1">Öffnen Sie das Menü</div>
+              <div className="menu text-c-light-green py-1">
+                Öffnen Sie das Menü
+              </div>
             </div>
           </div>
           <div>
