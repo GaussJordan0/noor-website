@@ -1,5 +1,5 @@
 "use client"
-import Hero from "../components/Hero/index"
+import Hero from "../components/Hero"
 import ServicesCard from "../utils/ServicesCard/index.jsx";
 import EmailForm from "../utils/EmailForm";
 import SectionTwo from "../components/SectionTwo/index.jsx";
