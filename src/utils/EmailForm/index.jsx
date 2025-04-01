@@ -14,15 +14,10 @@ export default function Index() {
   });
   return (
     <div className=" w-[95%] lg:w-[85%] mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-4 mt-24 mb-[20%]">
-        <div className="lg:col-start-3 xl:text-5xl lg:text-4xl md:text-3xl text-2xl 2xl:text-6xl lg:col-span-full font-bold font-oswald">
-          <h1>Haben Sie eine Frage?</h1>
-        </div>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 hover:group:border-opacity-0 gap-8">
         <div>
-          <h2 className="text-2xl font-oswald">Kontakt</h2>
-          <p className="font-normal mt-6 max-w-[55ch]">
+          <h2 className="text-4xl font-oswald mx-auto text-center">Kontakt</h2>
+          <p className="font-normal mt-4 mx-auto text-center text-sm max-w-[55ch]">
             Kontaktieren Sie uns, wenn Sie Hilfe benötigen oder Fragen zu
             Zahlungen oder Dienstleistungen haben, die wir Ihnen anbieten
             sollen.
@@ -90,7 +85,7 @@ export default function Index() {
             />
           </div>
 
-          <div className="md:col-start-1 md:col-end-2  text-xs text-black/70">
+          <div className="md:col-start-1 md:col-end-2  text-xs text-black/70 overflow-hidden">
             Betreff
             <select
               id="subject"
@@ -169,7 +164,7 @@ export default function Index() {
               }
             />
           </div>
-          <button className="flex flex-row-reverse items-center gap-x-2 bg-black text-white hover:bg-c-blue transition-colors px-4 py-2 rounded-md  w-fit md:col-start-2 hover:text-c-white duration-300">
+          <button className="flex flex-row-reverse items-center gap-x-2 bg-c-green text-c-beige hover:bg-c-blue transition-colors px-4 py-2 rounded-md  w-fit md:col-start-2 hover:text-c-white duration-300">
             <div className="font-bold text-xs">Meine Nachricht senden</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

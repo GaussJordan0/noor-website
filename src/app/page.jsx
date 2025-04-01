@@ -7,6 +7,7 @@ import EmailForm from "../utils/EmailForm";
 import SectionTwo from "../components/SectionTwo/index.jsx";
 import Faq from "../components/FAQ/index.jsx";
 import About from "../components/About/index.jsx"
+import Footer from "../components/Footer/index.jsx";
 
 export default function Home() {
   return (
@@ -35,9 +36,10 @@ export default function Home() {
       <div className="mt-10">
 
       <About/>
+      <EmailForm></EmailForm>
+      <Footer/>
       </div>
-      <div className="h-[200vh]"></div>
-      {/* <EmailForm></EmailForm> */}
+      
     </div>
   );
 }
