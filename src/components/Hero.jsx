@@ -45,7 +45,7 @@ export default function index() {
           <Image src="/logo.svg" width={100} height={100} alt="Sam Logo" />
         </div>
 
-        <div className="font-oswald font-bold flex justify-center  text-center text-4xl w-full mt-5">
+        <div className="font-oswald font-bold flex justify-center  text-center text-4xl w-full mt-5 md:text-5xl lg:text-6xl xl:text-7xl">
           <motion.p
             initial="initial"
             variants={variants}
@@ -62,7 +62,7 @@ export default function index() {
           whileInView="animate"
           viewport={{ once: true }}
           initial="initial"
-          className="text-center mt-4 text-3xl font-bold h-[100px]"
+          className="text-center mt-4 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold h-[100px]"
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -86,7 +86,7 @@ export default function index() {
           variants={variants}
           whileInView="animate"
           viewport={{ once: true }}
-          className="font-semibold leading-[1.2] w-[90%] mx-auto  text-center  text-sm"
+          className="font-semibold leading-[1.2] w-[90%] mx-auto  text-center  text-sm md:text-base lg:text-lg xl:text-xl lg:max-w-[50ch]"
         >
           Mit über 15 Jahren Erfahrung bietet unser Expertenteam erstklassige
           Physiotherapie. Wir heißen alle Kassenpatienten, Privatpatienten,
@@ -94,12 +94,12 @@ export default function index() {
         </motion.p>
         <div className="max-w-fit flex flex-col justify-center mx-auto mb-4">
         <div className="mx-auto mt-12">
-          <motion.button whileTap={{scale: 0.95}}  className="bg-[#1A422B] w-full text-white py-4 px-6 rounded-xl">
+          <motion.button whileTap={{scale: 0.95}}  className="bg-[#1A422B] w-full text-white py-4 px-6 rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer">
             Termin online buchen über Doctorlib
           </motion.button>
         </div>
         <div className="mx-auto mt-4 w-full">
-          <motion.button whileTap={{scale: 0.95}} className="bg-white w-full text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl">
+          <motion.button whileTap={{scale: 0.95}} className="bg-white w-full text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer">
             Kontaktieren Sie uns
           </motion.button>
         </div>

@@ -8,11 +8,10 @@ export default function Index() {
   const [expanded, setExpanded] = useState(false);
   const animation = () => {
     if (!expanded) {
-      animate(   ".bganimation",{
-        background: "#191919"
-      })
-     
-      
+      animate(".bganimation", {
+        background: "#191919",
+      });
+
       animate(
         "#plus",
         { rotate: 45 },
@@ -54,9 +53,9 @@ export default function Index() {
         }
       );
     } else {
-      animate(   ".bganimation",{
-        background: "#7C9726"
-      })
+      animate(".bganimation", {
+        background: "#7C9726",
+      });
       animate(
         "#plus",
         { rotate: -90 },
@@ -121,7 +120,12 @@ export default function Index() {
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 {" "}
-                <Image src="/home.jpg" className="object-cover rounded-md" fill alt="home menu image" />
+                <Image
+                  src="/home.jpg"
+                  className="object-cover rounded-md"
+                  fill
+                  alt="home menu image"
+                />
               </div>
 
               <div className="overflow-hidden">
@@ -134,12 +138,17 @@ export default function Index() {
               </div>
             </div>
             <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
-            <div
+              <div
                 className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 {" "}
-                <Image src="/services.jpg" className="object-cover rounded-md" fill alt="home menu image" />
+                <Image
+                  src="/services.jpg"
+                  className="object-cover rounded-md"
+                  fill
+                  alt="home menu image"
+                />
               </div>
               <div className="overflow-hidden">
                 <div
@@ -151,12 +160,17 @@ export default function Index() {
               </div>
             </div>
             <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
-            <div
+              <div
                 className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 {" "}
-                <Image src="/contact.jpg" className="object-cover rounded-md" fill alt="home menu image" />
+                <Image
+                  src="/contact.jpg"
+                  className="object-cover rounded-md"
+                  fill
+                  alt="home menu image"
+                />
               </div>
               <div className="overflow-hidden">
                 <div
@@ -203,12 +217,6 @@ export default function Index() {
                   Address: Westfälische Str. 72 10709 Berlin
                 </div>
               </div>
-              <div className="overflow-hidden">
-                <div className="w-fit font-bold animated-text">
-                  Number: +40 123 456 XXX
-                </div>
-              </div>
-
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
                   Phone: 030 44010654
