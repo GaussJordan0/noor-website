@@ -13,9 +13,9 @@ export default function Index() {
     number: false,
   });
   return (
-    <div className=" w-[95%] lg:w-[85%] mx-auto">
+    <div className=" w-[95%]  mx-auto ">
       <div>
-          <h2 className="text-4xl font-oswald mx-auto text-center">Kontakt</h2>
+          <h2 className="text-4xl font-oswald mx-auto text-center md:text-5xl lg:text-6xl xl:text-7xl md:mt-[5%]" id="contact">Kontakt</h2>
           <p className="font-normal mt-4 mx-auto text-center text-sm max-w-[55ch]">
             Kontaktieren Sie uns, wenn Sie Hilfe benötigen oder Fragen zu
             Zahlungen oder Dienstleistungen haben, die wir Ihnen anbieten
@@ -25,7 +25,7 @@ export default function Index() {
             *Pflichtfelder
           </p>
         </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 hover:group:border-opacity-0 gap-8">
+      <div className="grid grid-cols-1  hover:group:border-opacity-0 gap-8">
         
         <form className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:mt-0">
           <div className="md:col-start-1 md:col-end-2 text-xs text-black/70">

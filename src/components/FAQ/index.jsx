@@ -2,7 +2,7 @@ import Accordion from "../../utils/Accordion/index.jsx";
 export default function index() {
   return (
     <div>
-      <div className="mx-auto text-4xl font-oswald mt-12 mb-6 text-center font-semibold text-c-mid-green">
+      <div className="mx-auto md:mb-[5%] text-4xl font-oswald mt-12 mb-6 text-center font-semibold text-c-mid-green md:text-5xl lg:text-6xl xl:text-7xl">
         Häufig gestellte Fragen
       </div>
       <div className="flex justify-between flex-col items-center gap-1">

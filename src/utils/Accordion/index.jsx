@@ -12,7 +12,7 @@ export default function Index({ title, content }) {
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex justify-between items-center mb-2">
-        <h1 className=" font-oswald font-semibold max-w-[25ch] md:max-w-full">
+        <h1 className=" font-oswald font-semibold text-xl max-w-[25ch] md:max-w-full md:text-2xl lg:text-3xl xl:text-4xl">
           {title}
         </h1>
         <motion.button
@@ -33,7 +33,7 @@ export default function Index({ title, content }) {
       </div>
 
       <motion.div
-        className="text-sm overflow-hidden"
+        className="text-sm md:text-base lg:text-lg xl:text-xl overflow-hidden"
         initial={false}
         animate={{ height: isOpen ? "auto" : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}

@@ -12,7 +12,10 @@ export default function Home() {
     <div>
       <Hero />
       <SectionTwo />
+      <div className="lg:mt-24">
       <ServicesCard />
+
+      </div>
       <Faq />
       <div className="mt-10">
         <About />

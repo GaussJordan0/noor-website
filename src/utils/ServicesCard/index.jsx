@@ -1,122 +1,143 @@
 import Image from "next/image";
+import AnimatedString from "../AnimatedString";
 
 export default function Index() {
   return (
-    <div className="space-y-8 max-w-6xl mx-auto">
-      <div className="text-center font-oswald font-bold text-4xl mx-auto mt-20">
-        <div>Unsere Leistungen</div>
+    <div className="space-y-8 lg:max-w-[80%] mx-auto">
+      <div
+        id="services"
+        className="text-center font-oswald font-bold text-4xl mx-auto md:text-5xl lg:text-6xl xl:text-7xl mt-20"
+      >
+        <AnimatedString duration={0.7} once={true} staggerChildren={0.01}>Unsere Leistungen</AnimatedString>
       </div>
 
       <Image
         src="/illustration-3.svg"
+        className="mx-auto"
         alt="illustrative image for physiotherapy"
         width={400}
         height={500}
       />
-      <p className="w-[90%] mx-auto text-sm mt-2 text-center">
-        Bei Sam Physiotherapie bieten wir individuell abgestimmte Physiotherapie
-        für jeden Patienten.
-      </p>
+      <div className="w-[90%] mx-auto text-sm mt-2 text-center md:text-base lg:text-xl xl:text-2xl">
+        <AnimatedString duration={0.7} once={true} staggerChildren={0.01}>
+          Bei Sam Physiotherapie bieten wir individuell abgestimmte
+          Physiotherapie für jeden Patienten.
+        </AnimatedString>
+      </div>
 
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
-            Krankengymnastik
+        <div>
+          <div className="flex gap-2  px-4 pt-8">
+            <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
+              Krankengymnastik
+            </div>
+            <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
+              Leistungen
+            </div>
           </div>
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
-            Leistungen
+          <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
+            Physiotherapie
+          </h1>
+          <hr />
+        </div>
+        <div className="sm:grid sm:grid-cols-2 sm:pt-5">
+          <div>
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl  mx-auto py-4">
+              <AnimatedString duration={0.7} once={true} staggerChildren={0.01}>
+                Wir sind darauf spezialisiert, Bewegung, Funktion und Kraft durch
+                individuelle Physiotherapieprogramme wiederherzustellen. Ob nach
+                einer Verletzung, einer Operation oder zur Behandlung chronischer
+                Erkrankungen – unser Ziel ist es, die Mobilität zu verbessern,
+                Schmerzen zu lindern und weiteren Komplikationen vorzubeugen.
+                Unser Behandlungsansatz umfasst:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl  mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                {" "}
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Funktionelle Bewegungsanalysen
+              </p>
+              <p className="font-semibold flex gap-2">
+                {" "}
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Gezielte therapeutische Übungen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Gelenk- und Weichteilmobilisation
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Strategien zur Verletzungsprävention
+              </p>
+            </div>
+          </div>
+
+          <div className="relative h-[200px] xl:min-h-[600px]  sm:h-full w-[90%]  mx-auto">
+            <Image
+              className="rounded-2xl object-cover "
+              src="/image-1.jpg"
+              alt="Placeholder"
+              fill
+            />
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
-          Physiotherapie
-        </h1>
-        <hr />
 
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Wir sind darauf spezialisiert, Bewegung, Funktion und Kraft durch
-          individuelle Physiotherapieprogramme wiederherzustellen. Ob nach einer
-          Verletzung, einer Operation oder zur Behandlung chronischer
-          Erkrankungen – unser Ziel ist es, die Mobilität zu verbessern,
-          Schmerzen zu lindern und weiteren Komplikationen vorzubeugen. Unser
-          Behandlungsansatz umfasst:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Funktionelle Bewegungsanalysen
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Gezielte therapeutische Übungen
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Gelenk- und Weichteilmobilisation
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Strategien zur Verletzungsprävention
-          </p>
-        </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           01
         </div>
       </section>
 
       {/* ---------------------------------------------------------------- */}
 
-      <section className="bg-c-beige drop-shadow-xl  rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">MLD</div>
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+      <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
+            MLD
+          </div>
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
           Manuelle Lymphdrainage
         </h1>
         <hr />
+        <div className="sm:grid sm:grid-flow-col-dense sm:grid-cols-2 sm:pt-5">
+          <div className="col-start-2 col-end-3">
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString duration={0.7} staggerChildren={0.01} once={true}>
+                Unsere spezialisierte lymphatische Therapie unterstützt den
+                natürlichen Entgiftungsprozess des Körpers, indem sie
+                Flüssigkeitsansammlungen, Schwellungen und Beschwerden reduziert.
+                Diese Therapie ist besonders vorteilhaft für Patienten nach
+                Operationen, bei Lymphödemen oder venöser Insuffizienz. Wir wenden
+                wissenschaftlich fundierte Techniken an, um das Lymphsystem zu
+                stimulieren, die Durchblutung zu fördern und die Heilung zu
+                beschleunigen.
+              </AnimatedString>
 
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Unsere spezialisierte lymphatische Therapie unterstützt den
-          natürlichen Entgiftungsprozess des Körpers, indem sie
-          Flüssigkeitsansammlungen, Schwellungen und Beschwerden reduziert.
-          Diese Therapie ist besonders vorteilhaft für Patienten nach
-          Operationen, bei Lymphödemen oder venöser Insuffizienz. Wir wenden
-          wissenschaftlich fundierte Techniken an, um das Lymphsystem zu
-          stimulieren, die Durchblutung zu fördern und die Heilung zu
-          beschleunigen. st:
-        </p>
-
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-2.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           02
         </div>
       </section>
@@ -124,188 +145,197 @@ export default function Index() {
       {/* ---------------------------------------------------------------- */}
 
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Bobath-Therapie
           </div>
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
           Neurologische Rehabilitation
         </h1>
         <hr />
-
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Wir bieten spezialisierte Therapien für Patienten mit neurologischen
-          Erkrankungen wie Schlaganfall, Multipler Sklerose oder Parkinson.
-          Unsere Bobath-zertifizierten Therapeuten nutzen neurophysiologische
-          Techniken, um:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Die motorische Funktion und Koordination zu verbessern
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Gleichgewicht und Haltungskontrolle zu stärken
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Neuroplastizität und Regeneration zu fördern
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Selbstständigkeit im Alltag wiederherzustellen
-          </p>
+        <div className="sm:grid sm:grid-cols-2 sm:pt-5">
+          <div>
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString duration={0.7} staggerChildren={0.01} once={true}>
+                Wir bieten spezialisierte Therapien für Patienten mit
+                neurologischen Erkrankungen wie Schlaganfall, Multipler Sklerose
+                oder Parkinson. Unsere Bobath-zertifizierten Therapeuten nutzen
+                neurophysiologische Techniken, um:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Die motorische Funktion und Koordination zu verbessern
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Gleichgewicht und Haltungskontrolle zu stärken
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Neuroplastizität und Regeneration zu fördern
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Selbstständigkeit im Alltag wiederherzustellen
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-3.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           03
         </div>
       </section>
 
       {/* ------------------------------------------------------ */}
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
           Manuelle Therapie
         </h1>
         <hr />
-
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Wir setzen fortschrittliche manuelle Techniken ein, um die
-          Gelenkbeweglichkeit wiederherzustellen, muskuläre Schmerzen zu lindern
-          und funktionelle Bewegungen zu verbessern. Unser Ansatz umfasst:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Gelenkmobilisation & Manipulation zur Verbesserung des
-            Bewegungsumfangs
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Myofasziale Entspannungstechniken zur Reduzierung von
-            Muskelverspannungen
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Triggerpunkttherapie zur Linderung chronischer Schmerzen
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            SHaltungsanalyse & -korrektur, um wiederkehrende Beschwerden zu
-            verhindern
-          </p>
+        <div className="sm:grid sm:grid-flow-col-dense sm:grid-cols-2 sm:pt-5">
+          <div className="col-start-2 col-end-3">
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString duration={0.7} staggerChildren={0.01} once={true}>
+                Wir setzen fortschrittliche manuelle Techniken ein, um die
+                Gelenkbeweglichkeit wiederherzustellen, muskuläre Schmerzen zu
+                lindern und funktionelle Bewegungen zu verbessern. Unser Ansatz
+                umfasst:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Gelenkmobilisation & Manipulation zur Verbesserung des
+                Bewegungsumfangs
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Myofasziale Entspannungstechniken zur Reduzierung von
+                Muskelverspannungen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Triggerpunkttherapie zur Linderung chronischer Schmerzen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Haltungsanalyse & -korrektur, um wiederkehrende Beschwerden zu
+                verhindern
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-4.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           04
         </div>
       </section>
       {/* ------------------------------------------------------------ */}
 
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
-            Atemtherapie
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
+            Myofasziale Dekompressionstherapie
           </div>
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
-          Pulmonale Physiotherapie
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
+          Schröpfen
         </h1>
         <hr />
-
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Für Patienten mit Mukoviszidose, chronisch obstruktiver
-          Lungenerkrankung (COPD) oder postoperativen Atemwegserkrankungen
-          bieten wir spezialisierte pulmonale Physiotherapie zur Verbesserung
-          der Lungenfunktion und Atmungseffizienz. Unsere Techniken umfassen:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Atemtherapie zur Sekretlösung
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Spezielle Atemübungen zur Verbesserung der Atemmechanik
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Pulmonale Rehabilitationsprogramme
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Lagerungstechniken zur Unterstützung der Atmung
-          </p>
+        <div className="sm:grid sm:grid-cols-2 sm:pt-5">
+          <div>
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString
+                duration={0.7}
+                staggerChildren={0.01}
+                once={true}
+              >
+                Unsere wissenschaftlich fundierte Schröpftherapie wird eingesetzt
+                zur:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Verbesserung der Durchblutung und Muskelregeneration
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Reduzierung von Entzündungen und Schmerzen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Förderung der Beweglichkeit und Flexibilität
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Unterstützung der Regeneration nach sportlicher Belastung
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-5.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           05
         </div>
       </section>
@@ -314,60 +344,70 @@ export default function Index() {
        */}
 
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
-            Myofasziale Dekompressionstherapie
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
+            Atemtherapie
           </div>
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
-          Schröpfen
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
+          Pulmonale Physiotherapie
         </h1>
         <hr />
-
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Unsere wissenschaftlich fundierte Schröpftherapie wird eingesetzt zur:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Verbesserung der Durchblutung und Muskelregeneration
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Reduzierung von Entzündungen und Schmerzen
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Förderung der Beweglichkeit und Flexibilität
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Unterstützung der Regeneration nach sportlicher Belastung
-          </p>
+        <div className="sm:grid sm:grid-flow-col-dense sm:grid-cols-2 sm:pt-5">
+          <div className="col-start-2 col-end-3">
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString
+                duration={0.7}
+                staggerChildren={0.01}
+                once={true}
+              >
+                Für Patienten mit Mukoviszidose, chronisch obstruktiver
+                Lungenerkrankung (COPD) oder postoperativen Atemwegserkrankungen
+                bieten wir spezialisierte pulmonale Physiotherapie zur
+                Verbesserung der Lungenfunktion und Atmungseffizienz. Unsere
+                Techniken umfassen:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Atemtherapie zur Sekretlösung
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Spezielle Atemübungen zur Verbesserung der Atemmechanik
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Pulmonale Rehabilitationsprogramme
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Lagerungstechniken zur Unterstützung der Atmung
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-6.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           06
         </div>
       </section>
@@ -375,124 +415,128 @@ export default function Index() {
       {/* ---------------------------------------------- */}
 
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
-          Medizinische Massagetherapie{" "}
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
+          Medizinische Massagetherapie
         </h1>
         <hr />
-
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Unsere klinisch fundierte Massagetherapie hilft bei muskulären
-          Dysfunktionen, Haltungsproblemen und chronischen Schmerzzuständen.
-          Unsere spezialisierten Therapeuten bieten:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Tiefengewebsmassage zur Behandlung von muskulären Schmerzen
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Myofasziale Therapie zur Lösung von Spannungen
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Sportmassage zur Unterstützung der sportlichen Leistung und
-            Regeneration
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Triggerpunkttherapie zur gezielten Schmerzbehandlung
-          </p>
+        <div className="sm:grid sm:grid-cols-2 sm:pt-5">
+          <div>
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString duration={0.7} staggerChildren={0.01} once={true}>
+                Unsere klinisch fundierte Massagetherapie hilft bei muskulären
+                Dysfunktionen, Haltungsproblemen und chronischen Schmerzzuständen.
+                Unsere spezialisierten Therapeuten bieten:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Tiefengewebsmassage zur Behandlung von muskulären Schmerzen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Myofasziale Therapie zur Lösung von Spannungen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Sportmassage zur Unterstützung der sportlichen Leistung und
+                Regeneration
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Triggerpunkttherapie zur gezielten Schmerzbehandlung
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-7.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           07
         </div>
       </section>
 
       {/* ---------------------------------------------- */}
       <section className="bg-c-beige drop-shadow-xl rounded-2xl w-[90%] mx-auto ">
-        <div className="flex gap-2  px-4 pt-8">
-          <div className="border-1 text-[10px] py-1 px-3 rounded-2xl">
+        <div className="flex gap-2 px-4 pt-8">
+          <div className="border-1 text-[10px] md:text-sm xl:text-base py-1 px-3 rounded-2xl">
             Leistungen
           </div>
         </div>
-        <h1 className="font-oswald font-semibold text-4xl px-4 pt-2 pb-6">
-          Hausbesuche – Professionelle Physiotherapie zu Hause{" "}
+        <h1 className="font-oswald font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 pt-2 pb-6">
+          Hausbesuche – Professionelle Physiotherapie zu Hause
         </h1>
         <hr />
-
-        <p className="text-sm w-[90%] mx-auto py-4">
-          Wir bieten unsere hochwertigen physiotherapeutischen Leistungen auch
-          als Hausbesuche für Patienten an, die aufgrund von eingeschränkter
-          Mobilität, postoperativer Genesung oder neurologischen Erkrankungen
-          nicht in unsere Praxis kommen können. Unsere mobilen Behandlungen
-          umfassen:
-        </p>
-        <div className="w-[90%] mx-auto text-sm mt-2 mb-8 space-y-1">
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Detaillierte physiotherapeutische Untersuchungen und individuelle
-            Therapiepläne
-          </p>
-          <p className="font-semibold flex gap-2">
-            {" "}
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Rehabilitation nach Operationen, wie z. B. Gelenkersatz oder
-            Frakturen
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Funktionelles Bewegungstraining für ältere oder
-            mobilitätseingeschränkte Patienten
-          </p>
-          <p className="font-semibold flex gap-2">
-            <span className="text-c-mid-green">
-              <SvgIcon />
-            </span>
-            Schmerztherapie und Verbesserung der Bewegungsabläufe
-          </p>
+        <div className="sm:grid sm:grid-flow-dense sm:grid-cols-2 sm:pt-5">
+          <div className="col-start-2 col-end-3">
+            <div className="text-sm w-[90%] md:text-base lg:text-lg xl:text-xl mx-auto py-4">
+              <AnimatedString duration={0.7} staggerChildren={0.01} once={true}>
+                Wir bieten unsere hochwertigen physiotherapeutischen Leistungen
+                auch als Hausbesuche für Patienten an, die aufgrund von
+                eingeschränkter Mobilität, postoperativer Genesung oder
+                neurologischen Erkrankungen nicht in unsere Praxis kommen können.
+                Unsere mobilen Behandlungen umfassen:
+              </AnimatedString>
+            </div>
+            <div className="w-[90%] mx-auto text-sm md:text-base lg:text-lg xl:text-xl mt-2 md:mt-4 lg:mt-8 xl:mt-16 mb-8 space-y-1">
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Detaillierte physiotherapeutische Untersuchungen und
+                individuelle Therapiepläne
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Rehabilitation nach Operationen, wie z. B. Gelenkersatz oder
+                Frakturen
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Funktionelles Bewegungstraining für ältere oder
+                mobilitätseingeschränkte Patienten
+              </p>
+              <p className="font-semibold flex gap-2">
+                <span className="text-c-mid-green">
+                  <SvgIcon />
+                </span>
+                Schmerztherapie und Verbesserung der Bewegungsabläufe
+              </p>
+            </div>
+          </div>
+          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+            <Image
+              className="rounded-2xl object-cover"
+              src="/image-8.jpg"
+              alt="Placeholder"
+              fill
+            />
+          </div>
         </div>
-        <div className="relative h-[200px] w-[90%] mx-auto">
-          <Image
-            className="rounded-2xl object-cover"
-            src="/img-1.jpeg"
-            alt="Placeholder"
-            fill
-          />
-        </div>
-
-        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end">
+        <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           08
         </div>
       </section>

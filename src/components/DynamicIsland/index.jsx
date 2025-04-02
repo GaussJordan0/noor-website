@@ -95,13 +95,13 @@ export default function Index() {
   };
 
   return (
-    <div ref={scope} className=" relative z-[99999] text-c-light-green">
+    <div ref={scope} className=" relative z-[99999] text-c-light-green mx-auto">
       <section
-        className="fixed bottom-3 flex justify-center w-full "
+        className="fixed bottom-3 flex justify-center w-full"
         // onClick={() => setExpanded(!expanded)}
       >
         <div
-          className="  bg-c-mid-green bganimation rounded-2xl w-[90%] mx-auto h-[40px]"
+          className="  bg-c-mid-green bganimation rounded-2xl w-[90%] mx-auto h-[40px] md:max-w-3xl md:text-2xl "
           id="background"
         >
           <div className="flex flex-col w-full h-full ">
@@ -109,14 +109,18 @@ export default function Index() {
               className="p-5 flex w-full justify-end items-center border-b  border-white/20 opacity-0"
               id="opacity"
             >
-              <button className="text-sm bg-c-light-green text-c-black drop-shadow rounded-lg px-4 py-1 font-oswald">
-                Book an appointment
+              <button className="text-base bg-c-light-green text-c-black drop-shadow rounded-lg px-4 py-1 font-oswald">
+                Termin buchen
               </button>
             </div>
 
-            <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
+            <a
+              href="#home"
+              className="flex hover:bg-c-mid-green transition duration-300 px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20"
+              onClick={() => animation()}
+            >
               <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
+                className="bg-white w-[80px] h-[55px] md:w-[120px] md:h-[80px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 {" "}
@@ -136,10 +140,14 @@ export default function Index() {
                   Home
                 </div>
               </div>
-            </div>
-            <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
+            </a>
+            <a
+              href="#services"
+              className="flex hover:bg-c-mid-green transition duration-300 px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20"
+              onClick={() => animation()}
+            >
               <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
+                className="bg-white w-[80px] h-[55px] md:w-[120px] md:h-[80px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 {" "}
@@ -158,10 +166,14 @@ export default function Index() {
                   Services
                 </div>
               </div>
-            </div>
-            <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
+            </a>
+            <a
+              href="#contact"
+              onClick={() => animation()}
+              className="flex hover:bg-c-mid-green transition duration-300 px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20"
+            >
               <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
+                className="bg-white w-[80px] h-[55px] md:w-[120px] md:h-[80px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 {" "}
@@ -180,10 +192,15 @@ export default function Index() {
                   Contact
                 </div>
               </div>
-            </div>
-            <div className="flex px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20">
+            </a>
+            <a
+              href=""
+              target="_blank"
+              onClick={() => animation()}
+              className="flex px-5 py-2 gap-x-6 items-center  border-b-1 hover:bg-blue-600  transition duration-500 border-white/20"
+            >
               <div
-                className="bg-white w-[80px] h-[55px] rounded-md clip-animation relative"
+                className="bg-white w-[80px] h-[55px] md:w-[120px] md:h-[80px] rounded-md clip-animation relative"
                 style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }}
               >
                 <Image
@@ -201,20 +218,28 @@ export default function Index() {
                   Doctolib
                 </div>
               </div>
-            </div>
+            </a>
 
             <div
-              className="flex-1 text-xs flex flex-col justify-end px-5 py-3 mb-[45px] "
+              className="flex-1 text-xs md:text-sm flex flex-col justify-end px-5 py-3 mb-[45px] "
               onClick={() => animation()}
             >
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
-                  info@sam-physio.de
+                  <a href="mailto:info@sam-physio.de" target="_blank">
+                    {" "}
+                    info@sam-physio.de
+                  </a>
                 </div>
               </div>
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
-                  Address: Westfälische Str. 72 10709 Berlin
+                  <a
+                    href="https://www.google.pl/maps/place/Westf%C3%A4lische+Str.+72,+10709+Berlin,+Germany/@52.4947943,13.2999142,17.98z/data=!4m6!3m5!1s0x47a850c1e2a68b75:0x3e1b91433c9cd972!8m2!3d52.494593!4d13.3010559!16s%2Fg%2F11q2n82__1?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                  >
+                    Address: Westfälische Str. 72 10709 Berlin
+                  </a>
                 </div>
               </div>
               <div className="overflow-hidden">
@@ -246,7 +271,7 @@ export default function Index() {
 
       <section className="fixed bottom-3 flex items-center w-full opacito ">
         <button
-          className=" cursor-pointer bg-c-mid-green bganimation text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] mx-auto justify-between items-end"
+          className=" cursor-pointer bg-c-mid-green bganimation text-[#E6E6E6] px-4 py-3 rounded-2xl flex w-[90%] md:max-w-3xl mx-auto justify-between items-end"
           onClick={() => animation()}
         >
           <div className=" flex items-center text-sm font-bold">

@@ -47,6 +47,7 @@ export default function index() {
 
         <div className="font-oswald font-bold flex justify-center  text-center text-4xl w-full mt-5 md:text-5xl lg:text-6xl xl:text-7xl">
           <motion.p
+          id="home"
             initial="initial"
             variants={variants}
             whileInView="animate"
