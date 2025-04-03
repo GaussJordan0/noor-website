@@ -15,18 +15,19 @@ export default function Index() {
   return (
     <div className=" w-[95%]  mx-auto ">
       <div>
-          <h2 className="text-4xl font-oswald mx-auto text-center md:text-5xl lg:text-6xl xl:text-7xl md:mt-[5%]" id="contact">Kontakt</h2>
-          <p className="font-normal mt-4 mx-auto text-center text-sm max-w-[55ch]">
-            Kontaktieren Sie uns, wenn Sie Hilfe benötigen oder Fragen zu
-            Zahlungen oder Dienstleistungen haben, die wir Ihnen anbieten
-            sollen.
-          </p>
-          <p className="text-xs font-bold tracking-tight mt-6">
-            *Pflichtfelder
-          </p>
-        </div>
+        <h2
+          className="text-4xl font-oswald mx-auto text-center md:text-5xl lg:text-6xl xl:text-7xl md:mt-[5%]"
+          id="contact"
+        >
+          Kontakt
+        </h2>
+        <p className="font-normal mt-4 mx-auto text-center text-sm max-w-[55ch]">
+          Kontaktieren Sie uns, wenn Sie Hilfe benötigen oder Fragen zu
+          Zahlungen oder Dienstleistungen haben, die wir Ihnen anbieten sollen.
+        </p>
+        <p className="text-xs font-bold tracking-tight mt-6">*Pflichtfelder</p>
+      </div>
       <div className="grid grid-cols-1  hover:group:border-opacity-0 gap-8">
-        
         <form className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:mt-0">
           <div className="md:col-start-1 md:col-end-2 text-xs text-black/70">
             Vorname*
@@ -153,16 +154,19 @@ export default function Index() {
               rows={1}
               required
               placeholder="Meine Nachricht..."
-              className={`text-2xl w-full border-b-[1px] bg-transparent border-black py-2 hover:border-opacity-100 transition-all 
-                        ${
-                          focused.message
-                            ? "border-opacity-100"
-                            : "border-opacity-40"
-                        }`}
+              className={`text-2xl w-full border-b-[1px] bg-transparent border-black py-2 hover:border-opacity-100 transition-all
+    ${
+      focused.message ? "border-opacity-100" : "border-opacity-40"
+    } overflow-hidden resize-none`}
               onFocus={() => setFocused({ ...focused, message: true })}
               onBlur={(e) =>
                 setFocused({ ...focused, message: e.target.value !== "" })
               }
+              onInput={(e) => {
+                const target = e.target;
+                target.style.height = "auto"; // Reset height
+                target.style.height = `${target.scrollHeight}px`; // Set height dynamically
+              }}
             />
           </div>
           <div className="mx-auto flex justify-center">

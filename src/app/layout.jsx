@@ -1,8 +1,6 @@
-"use client";
-import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
 import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
+import { ReactLenis } from "lenis/react";
 import DynamicIsland from "../components/DynamicIsland";
 const oswald = Oswald({
   subsets: ["latin"],
@@ -17,12 +15,14 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <motion.body
-        className={`${inter.className} antialiased bg-c-light-green text-[#191919] `}
-      >
-        {children}
-        <DynamicIsland />
-      </motion.body>
+      <ReactLenis root>
+        <body
+          className={`${inter.className} antialiased bg-c-light-green text-[#191919] `}
+        >
+          {children}
+          <DynamicIsland />
+        </body>
+      </ReactLenis>
     </html>
   );
 }

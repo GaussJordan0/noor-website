@@ -2,12 +2,15 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, useAnimate, stagger } from "motion/react";
+import { useLenis } from "lenis/react";
 
 export default function Index() {
   const [scope, animate] = useAnimate();
   const [expanded, setExpanded] = useState(false);
+  const lenis = useLenis();
   const animation = () => {
     if (!expanded) {
+      lenis?.stop();
       animate(".bganimation", {
         background: "#191919",
       });
@@ -53,6 +56,7 @@ export default function Index() {
         }
       );
     } else {
+      lenis?.start();
       animate(".bganimation", {
         background: "#7C9726",
       });
@@ -137,7 +141,7 @@ export default function Index() {
                   className=" font-semibold animated-text leading-[1]   "
                   style={{ transform: "translateY(100%)" }}
                 >
-                  Home
+                  Startseite
                 </div>
               </div>
             </a>
@@ -163,7 +167,7 @@ export default function Index() {
                   className="font-semibold animated-text leading-[1]"
                   style={{ transform: "translateY(100%)" }}
                 >
-                  Services
+                  Dienstleistungen
                 </div>
               </div>
             </a>
@@ -189,7 +193,7 @@ export default function Index() {
                   className=" font-semibold animated-text leading-[1]   "
                   style={{ transform: "translateY(100%)" }}
                 >
-                  Contact
+                  Kontakt
                 </div>
               </div>
             </a>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AnimatedString from "../../utils/AnimatedString";
+import ImageGallery from "../../utils/ImageGallery";
 
 export default function index() {
   return (
@@ -38,12 +39,7 @@ export default function index() {
           </AnimatedString>
         </div>
         <div className="relative w-[90%] mx-auto h-[200px] sm:h-[400px] md:h-[500px] my-4 col-start-1 col-span-full row-start-1 xl:col-start-1 xl:col-end-2">
-          <Image
-            src="/contact-image.jpg"
-            fill
-            alt="About Image"
-            className="rounded-2xl object-cover"
-          />
+          <ImageGallery />
         </div>
         <div className="flex flex-col gap-4 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:mt-[12rem] 2xl:mt-[18rem]">
           <div className="text-sm w-[90%] mx-auto xl:text-md 2xl:text-lg">
