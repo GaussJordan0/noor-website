@@ -12,9 +12,19 @@ const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+export const metadata = {
+  title: "Sam Physio | Physiotherapie & Osteopathie Dresden",
+  description:
+    "Physiotherapie & Osteopathie in Dresden - Entdecken Sie unsere Angebote und Behandlungsmethoden.",
+  keywords: ["Physiotherapie", "Osteopathie", "Dresden"],
+  image: "/icon.jpg",
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
+      <head>
+        <link rel="icon" href="/icon.jpg" type="image/jpg" sizes="any" />
+      </head>
       <ReactLenis root>
         <body
           className={`${inter.className} antialiased bg-c-light-green text-[#191919] `}
@@ -26,3 +36,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+

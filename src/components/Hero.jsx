@@ -76,7 +76,7 @@ export default function index() {
           initial="initial"
           className="text-center mt-4 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold h-[100px]"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             <motion.div
               key={index}
               variants={parentVariants}
