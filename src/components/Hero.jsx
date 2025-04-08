@@ -15,20 +15,31 @@ const texts = [
   "HAUSBESUCHE",
 ];
 const parentVariants = {
-  initial: { y:10},
-  animate: { y:0,
+  initial: { y: 10 },
+  animate: {
+    y: 0,
     staggerChildren: 0.5,
-    transition: { duration: 0.4, easeOut }
+    transition: { duration: 0.4, easeOut },
   },
 };
 const variants = {
-  initial: { opacity: 0, filter: "blur(2px)", },
-  animate: { opacity: 1, filter: "blur(0px)",  transition: { duration: 0.4 } },
+  initial: { opacity: 0, filter: "blur(2px)" },
+  animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.4 } },
 };
 const charVariants = {
-  initial: { opacity: 0, filter: "blur(2px)", y:10 },
-  animate: { opacity: 1, filter: "blur(0px)", y:0, transition: { duration: 0.4 } },
-  exit: { opacity: 0, filter: "blur(2px)", transition: { duration: 0.3 } },
+  initial: { opacity: 0, filter: "blur(2px)", y: 10 },
+  animate: {
+    opacity: 1,
+    filter: "blur(0px)",
+    y: 0,
+    transition: { duration: 0.4 },
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    filter: "blur(2px)",
+    transition: { duration: 0.3 },
+  },
 };
 export default function index() {
   const [index, setIndex] = useState(0);
@@ -47,7 +58,7 @@ export default function index() {
 
         <div className="font-oswald font-bold flex justify-center  text-center text-4xl w-full mt-5 md:text-5xl lg:text-6xl xl:text-7xl">
           <motion.p
-          id="home"
+            id="home"
             initial="initial"
             variants={variants}
             whileInView="animate"
@@ -65,7 +76,7 @@ export default function index() {
           initial="initial"
           className="text-center mt-4 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold h-[100px]"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
             <motion.div
               key={index}
               variants={parentVariants}
@@ -74,11 +85,7 @@ export default function index() {
               exit="exit"
               className="text-c-mid-green"
             >
-              {texts[index].split("").map((char, i) => (
-                <motion.span variants={charVariants}  key={i}>
-                  {char}
-                </motion.span>
-              ))}
+              <motion.div variants={charVariants}>{texts[index]}</motion.div>
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -94,17 +101,23 @@ export default function index() {
           Selbstzahler und Erholungssuchende willkommen.
         </motion.p>
         <div className="max-w-fit flex flex-col justify-center mx-auto mb-4">
-        <div className="mx-auto mt-12">
-          <motion.button whileTap={{scale: 0.95}}  className="bg-[#1A422B] w-full text-white py-4 px-6 rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer">
-            Termin online buchen über Doctorlib
-          </motion.button>
+          <div className="mx-auto mt-12">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#1A422B] w-full text-white py-4 px-6 rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
+            >
+              Termin online buchen über Doctorlib
+            </motion.button>
+          </div>
+          <div className="mx-auto mt-4 w-full">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="bg-white w-full text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
+            >
+              Kontaktieren Sie uns
+            </motion.button>
+          </div>
         </div>
-        <div className="mx-auto mt-4 w-full">
-          <motion.button whileTap={{scale: 0.95}} className="bg-white w-full text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer">
-            Kontaktieren Sie uns
-          </motion.button>
-        </div>
-      </div>
         {/* <div className=" relative w-[90%] mx-auto rounded-2xl h-[300px] mb-8">
           <Image
             src="/img-1.jpeg"
@@ -113,8 +126,6 @@ export default function index() {
             className="rounded-2xl object-cover"
           />
         </div> */}
-        
-   
       </div>
     </div>
   );
