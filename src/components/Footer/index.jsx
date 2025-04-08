@@ -27,17 +27,17 @@ const Index = () => {
           <ul className="space-y-1">
             <li>
               <a href="#home" className="hover:underline">
-                Home
+                Startseite
               </a>
             </li>
             <li>
               <a href="#about-us" className="hover:underline">
-                About
+                Über uns
               </a>
             </li>
             <li>
               <a href="#services" className="hover:underline">
-                Services
+                Dienstleistungen
               </a>
             </li>
             <li>
@@ -50,9 +50,9 @@ const Index = () => {
         {/* Address Section */}
         <div>
           <div>
-            <h3 className="font-semibold font-oswald mb-4 text-lg">Address</h3>
+            <h3 className="font-semibold font-oswald mb-4 text-lg">Adresse</h3>
             <a
-            className="hover:underline"
+              className="hover:underline"
               href="https://www.google.pl/maps/place/Westf%C3%A4lische+Str.+72,+10709+Berlin,+Germany/@52.4947943,13.2999142,17.98z/data=!4m6!3m5!1s0x47a850c1e2a68b75:0x3e1b91433c9cd972!8m2!3d52.494593!4d13.3010559!16s%2Fg%2F11q2n82__1?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
             >
@@ -63,7 +63,7 @@ const Index = () => {
           {/* Contact Section */}
           <div>
             <h3 className="font-semibold font-oswald mb-4 text-lg">
-              Contact Information
+              Kontaktinformationen
             </h3>
             <p>Phone: 030 44010654</p>
             <p>Phone: 030 44013538</p>
@@ -82,7 +82,13 @@ const Index = () => {
       {/* Berlin Local Time & Developed By Section */}
       <div className="mt-24 mb-[50px] text-xs font-semibold md:text-sm grid md:grid-cols-2">
         <p>Berlin Local Time: {time}</p>
-        <p className="underline">Developed by GaussJordan</p>
+        <a
+          className="underline"
+          href="https://www.gaussjordan.agency/"
+          target="_blank"
+        >
+          Developed by GaussJordan
+        </a>
       </div>
     </footer>
   );
