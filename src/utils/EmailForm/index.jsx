@@ -1,8 +1,40 @@
 "use client";
 
+
 import { useState } from "react";
 
 export default function Index() {
+  const send = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      lastname: formData.get("lastname"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      number: formData.get("number"),
+      message: formData.get("message"),
+    };
+
+    const response = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      alert("Nachricht erfolgreich gesendet!");
+      form.reset();
+    } else {
+      alert("Fehler beim Senden der Nachricht.");
+    }
+  };
+
   const [focused, setFocused] = useState({
     name: false,
     lastname: false,
@@ -28,12 +60,16 @@ export default function Index() {
         <p className="text-xs font-bold tracking-tight mt-6">*Pflichtfelder</p>
       </div>
       <div className="grid grid-cols-1  hover:group:border-opacity-0 gap-8">
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:mt-0">
+        <form
+          onSubmit={send}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 md:mt-0"
+        >
           <div className="md:col-start-1 md:col-end-2 text-xs text-black/70">
             Vorname*
             <input
               type="text"
               id="name"
+              name="name"
               placeholder="John"
               required
               className={`text-2xl w-full border-b-[1px] bg-transparent border-black hover:border-opacity-100  py-2 transition-all 
@@ -53,6 +89,7 @@ export default function Index() {
             <input
               type="text"
               id="name"
+              name="lastname"
               placeholder="Doe"
               required
               className={`text-2xl w-full border-b-[1px] bg-transparent border-black py-2 hover:border-opacity-100 transition-all 
@@ -72,6 +109,7 @@ export default function Index() {
             <input
               type="email"
               id="name"
+              name="email"
               placeholder="you@email.com"
               required
               className={`text-2xl w-full border-b-[1px] bg-transparent border-black py-2 hover:border-opacity-100 transition-all 
@@ -91,6 +129,7 @@ export default function Index() {
             Betreff
             <select
               id="subject"
+              name="subject"
               className={`text-2xl w-full border-b-[1px] bg-transparent border-black py-2 hover:border-opacity-100 transition-all 
                         ${
                           focused.subject
@@ -132,6 +171,7 @@ export default function Index() {
             <input
               type="text"
               id="name"
+              name="number"
               placeholder="Telefonnummer"
               required
               className={`text-2xl w-full border-b-[1px] bg-transparent border-black py-2 hover:border-opacity-100 transition-all 
@@ -151,6 +191,7 @@ export default function Index() {
             Nachricht*
             <textarea
               id="message"
+              name="message"
               rows={1}
               required
               placeholder="Meine Nachricht..."
@@ -170,7 +211,10 @@ export default function Index() {
             />
           </div>
           <div className="mx-auto flex justify-center">
-            <button className="flex flex-row-reverse items-center gap-x-2 bg-c-green text-c-beige hover:bg-c-mid-green transition-colors px-4 py-2 rounded-md  w-fit  hover:text-c-light-green duration-300">
+            <button
+              type="submit"
+              className="flex flex-row-reverse items-center gap-x-2 bg-c-green text-c-beige hover:bg-c-mid-green transition-colors px-4 py-2 rounded-md  w-fit  hover:text-c-light-green duration-300"
+            >
               <div className="font-bold text-xs">Meine Nachricht senden</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
