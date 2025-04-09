@@ -14,7 +14,7 @@ export default function index() {
         />
         <Accordion
           content={
-            "Eine Sitzung dauert in der Regel zwischen 20 und 60 Minuten, abhängig von der Behandlung und der ärztlichen Verordnung."
+            "Eine Sitzung dauert in der Regel zwischen 15 und 45 Minuten, abhängig von der Behandlung und der ärztlichen Verordnung."
           }
           title={"Wie lange dauert eine Physiotherapie-Sitzung?"}
         />
