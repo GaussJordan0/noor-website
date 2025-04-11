@@ -257,11 +257,11 @@ export default function Index() {
                   Phone: 030 44013538
                 </div>
               </div>
-              <div className="overflow-hidden">
-                <div className="w-fit font-bold animated-text">
-                  Mobile: 0176 34984110
-                </div>
-              </div>
+                {/* <div className="overflow-hidden">
+                  <div className="w-fit font-bold animated-text">
+                    Mobile: 0176 34984110
+                  </div>
+                </div> */}
               <div className="overflow-hidden">
                 <div className="w-fit font-bold animated-text">
                   Fax: 030 43744613

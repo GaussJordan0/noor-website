@@ -44,8 +44,13 @@ const Index = () => {
               </a>
             </li>
             <li>
-              <a href="" target="_blank" className="hover:underline">
+              <a href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin" target="_blank" className="hover:underline">
                 Doctolib
+              </a>
+            </li>
+            <li>
+              <a href="/privacy" target="_blank" className="hover:underline">
+                Privatsphäre
               </a>
             </li>
           </ul>
@@ -71,7 +76,6 @@ const Index = () => {
             <p>Phone: 030 44010654</p>
             <p>Phone: 030 44013538</p>
             <p>Fax: 030 43744613</p>
-            <p>Mobile: 0176 34984110</p>
             <p className="hover:underline">
               Email:{" "}
               <a href="mailto:info@sam-physio.de" className="">
