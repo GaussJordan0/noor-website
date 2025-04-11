@@ -110,7 +110,7 @@ export default function index() {
                 href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin"
                 target="blank"
               >
-                Termin online buchen über Doctorlib
+                Termin online buchen über Doctolib
               </a>
             </motion.button>
           </div>
