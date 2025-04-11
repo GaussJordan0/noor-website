@@ -237,7 +237,7 @@ export default function Index() {
               type="submit"
               className="flex flex-row-reverse items-center gap-x-2 bg-c-green text-c-beige hover:bg-c-mid-green transition-colors px-4 py-2 rounded-md  w-fit  hover:text-c-light-green duration-300"
             >
-              <div className="font-bold text-xs">Meine Nachricht senden</div>
+              <div className="font-bold text-xs cursor-pointer">Meine Nachricht senden</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
