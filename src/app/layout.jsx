@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Sam Physio | Physiotherapie & Osteopathie Dresden",
+  title: "Sam Physio | Physiotherapie & Osteopathie in Berlin",
   description:
-    "Physiotherapie & Osteopathie in Dresden - Entdecken Sie unsere Angebote und Behandlungsmethoden.",
+    "Physiotherapie & Osteopathie in Berlin - Entdecken Sie unsere Angebote und Behandlungsmethoden.",
   keywords: ["Physiotherapie", "Osteopathie", "Dresden"],
   image: "/icon.jpg",
 };
