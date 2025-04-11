@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, useAnimate, stagger } from "motion/react";
 import { useLenis } from "lenis/react";
+import Link from "next/link";
 
 export default function Index() {
   const [scope, animate] = useAnimate();
@@ -118,8 +119,8 @@ export default function Index() {
               </button>
             </div>
 
-            <a
-              href="#home"
+            <Link
+              href="/"
               className="flex hover:bg-c-mid-green transition duration-300 px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20"
               onClick={() => animation()}
             >
@@ -144,7 +145,7 @@ export default function Index() {
                   Startseite
                 </div>
               </div>
-            </a>
+            </Link>
             <a
               href="#services"
               className="flex hover:bg-c-mid-green transition duration-300 px-5 py-2 gap-x-6 items-center  border-b-1 border-white/20"
@@ -198,7 +199,7 @@ export default function Index() {
               </div>
             </a>
             <a
-              href=""
+              href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin"
               target="_blank"
               onClick={() => animation()}
               className="flex px-5 py-2 gap-x-6 items-center  border-b-1 hover:bg-blue-600  transition duration-500 border-white/20"

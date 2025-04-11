@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useState } from "react";
 
 export default function Index() {
@@ -44,6 +43,9 @@ export default function Index() {
     subject: false,
     number: false,
   });
+
+  const [agreed, setAgreed] = useState(false);
+
   return (
     <div className=" w-[95%]  mx-auto ">
       <div>
@@ -210,6 +212,26 @@ export default function Index() {
               }}
             />
           </div>
+          <div className="md:col-start-1 md:col-span-full text-xs text-black/70">
+            <label>
+              <input
+                type="checkbox"
+                required
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
+                className="mr-2"
+              />
+              Ich stimme den{" "}
+              <a href="/privacy" target="_blank" className="underline">
+                Datenschutzbestimmungen
+              </a>{" "}
+              und den{" "}
+              <a href="/privacy" target="_blank" className="underline">
+                Nutzungsbedingungen
+              </a>{" "}
+              zu.
+            </label>
+          </div>
           <div className="mx-auto flex justify-center">
             <button
               type="submit"
@@ -232,3 +254,4 @@ export default function Index() {
     </div>
   );
 }
+

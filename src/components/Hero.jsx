@@ -104,17 +104,22 @@ export default function index() {
           <div className="mx-auto mt-12">
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="bg-[#1A422B] w-full text-white py-4 px-6 rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
+              className="bg-[#1A422B] w-full hover:bg-c-mid-green transition-all text-white py-4 px-6 rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
             >
-              Termin online buchen über Doctorlib
+              <a
+                href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin"
+                target="blank"
+              >
+                Termin online buchen über Doctorlib
+              </a>
             </motion.button>
           </div>
           <div className="mx-auto mt-4 w-full">
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="bg-white w-full text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
+              className="bg-white w-full hover:bg-c-mid-green transition-all   hover:text-white text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
             >
-              Kontaktieren Sie uns
+              <a href="mailto:info@info@sam-physio.de" target="_blank">Kontaktieren Sie uns</a>
             </motion.button>
           </div>
         </div>
