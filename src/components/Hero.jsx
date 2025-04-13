@@ -119,7 +119,7 @@ export default function index() {
               whileTap={{ scale: 0.95 }}
               className="bg-white w-full hover:bg-c-mid-green transition-all   hover:text-white text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
             >
-              <a href="mailto:info@info@sam-physio.de" target="_blank">Kontaktieren Sie uns</a>
+              <a href="mailto:info@sam-physio.de" target="_blank">Kontaktieren Sie uns</a>
             </motion.button>
           </div>
         </div>
