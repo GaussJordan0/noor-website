@@ -101,27 +101,30 @@ export default function index() {
           Selbstzahler und Erholungssuchende willkommen.
         </motion.p>
         <div className="max-w-fit flex flex-col justify-center mx-auto mb-4">
-          <div className="mx-auto mt-12">
+          <a
+            href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin"
+            target="blank"
+            className="mx-auto mt-2 md:mt-4 lg:mt-6"
+          >
             <motion.button
               whileTap={{ scale: 0.95 }}
               className="bg-[#1A422B] w-full hover:bg-c-mid-green transition-all text-white py-4 px-6 rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
             >
-              <a
-                href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin"
-                target="blank"
-              >
-                Termin online buchen über Doctolib
-              </a>
+              Termin online buchen über Doctolib
             </motion.button>
-          </div>
-          <div className="mx-auto mt-4 w-full">
+          </a>
+          <a
+            href="mailto:info@sam-physio.de"
+            target="_blank"
+            className="mx-auto mt-1 lg:mt-2 w-full"
+          >
             <motion.button
               whileTap={{ scale: 0.95 }}
               className="bg-white w-full hover:bg-c-mid-green transition-all   hover:text-white text-c-green border-c-green border-2 py-3 font-semibold  rounded-xl md:text-lg lg:text-xl xl:text-xl cursor-pointer"
             >
-              <a href="mailto:info@sam-physio.de" target="_blank">Kontaktieren Sie uns</a>
+              Kontaktieren Sie uns
             </motion.button>
-          </div>
+          </a>
         </div>
         {/* <div className=" relative w-[90%] mx-auto rounded-2xl h-[300px] mb-8">
           <Image
