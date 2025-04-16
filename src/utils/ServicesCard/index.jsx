@@ -82,14 +82,14 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="relative h-[200px] xl:min-h-[600px]  sm:h-full w-[90%]  mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px]  sm:h-full w-[90%]  mx-auto">
             <Image
               className="rounded-2xl object-cover "
               src="/image-1.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
@@ -128,14 +128,14 @@ export default function Index() {
 
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-2.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           02
@@ -194,14 +194,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-3.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           03
@@ -259,14 +259,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-4.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           04
@@ -326,14 +326,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-5.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           05
@@ -398,14 +398,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-6.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           06
@@ -461,14 +461,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-7.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           07
@@ -527,14 +527,14 @@ export default function Index() {
               </p>
             </div>
           </div>
-          <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
+          {/* <div className="relative h-[200px] xl:min-h-[600px] sm:h-full w-[90%] mx-auto">
             <Image
               className="rounded-2xl object-cover"
               src="/image-8.jpg"
               alt="Placeholder"
               fill
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex w-[90%] font-oswald mx-auto py-4 justify-end md:text-lg lg:text-xl xl:text-2xl">
           08
