@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="de">
       <head>
         <link rel="icon" href="/icon.jpg" type="image/jpg" sizes="any" />
+        <meta name="msvalidate.01" content="EF57199B45F753A4C0F2B8651101E393" />
       </head>
       <ReactLenis root>
         <body
