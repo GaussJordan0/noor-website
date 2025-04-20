@@ -20,15 +20,24 @@ export default function index() {
         alt="About Image"
         className="rounded-2xl mx-auto"
       />
-
+      <video
+        loading="lazy"
+        playsInline
+        src="/video-sam.mp4"
+        autoPlay
+        loop
+        muted
+        className="w-[90%] mx-auto border-2 border-c-green rounded-2xl  h-auto aspect-auto mb-4 lg:mb-12"
+      ></video>
       <h2 className="text-center font-semibold  md:text-lg lg:text-xl xl:text-2xl mx-auto mt-2 md:mb-4 lg:mb-8 xl:mb-16">
         Wer wir sind und was uns ausmacht
       </h2>
+
       <div className="md:grid md:grid-cols-2 md:grid-rows-1 ">
         <div className="text-sm w-[90%] mx-auto mt-4  xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:text-md  2xl:text-lg">
           <AnimatedString duration={0.7} once={true} staggerChildren={0.01}>
-            Die Therapieklinik von Sameh Elbehouti wurde mit dem Ziel gegründet,
-            Menschen mit maßgeschneiderten, fortschrittlichen
+            Der Physiotherapeut von Sameh Elbehouti wurde mit dem Ziel
+            gegründet, Menschen mit maßgeschneiderten, fortschrittlichen
             physiotherapeutischen Behandlungen zu helfen. Mit über 15 Jahren
             Erfahrung und einem hochqualifizierten Team haben wir es uns zur
             Aufgabe gemacht, individuelle Therapiepläne zu entwickeln, die auf
