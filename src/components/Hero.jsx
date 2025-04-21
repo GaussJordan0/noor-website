@@ -65,7 +65,7 @@ export default function index() {
             viewport={{ once: true }}
             className="w-[21ch]  "
           >
-            Willkommen in Ihrer therapiezentrum SAM
+            Herzlich willkommen im Therapiezentrum SAM.
           </motion.p>
         </div>
 
