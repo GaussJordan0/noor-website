@@ -22,40 +22,20 @@ const Index = () => {
 
   return (
     <footer className="w-full bg-c-green text-c-beige p-6">
-      {/* ...existing content... */}
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2  gap-6">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Navigation Links */}
         <div>
-          {/* Navigation Links */}
           <h3 className="font-semibold font-oswald mb-4 text-lg">Navigation</h3>
           <ul className="space-y-1">
-            <li>
-              <a href="#home" className="hover:underline">
-                Startseite
-              </a>
-            </li>
-            <li>
-              <a href="#about-us" className="hover:underline">
-                Über uns
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="hover:underline">
-                Dienstleistungen
-              </a>
-            </li>
-            <li>
-              <a href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin" target="_blank" className="hover:underline">
-                Doctolib
-              </a>
-            </li>
-            <li>
-              <a href="/privacy" target="_blank" className="hover:underline">
-                Privatsphäre
-              </a>
-            </li>
+            <li><a href="#home" className="hover:underline">Startseite</a></li>
+            <li><a href="#about-us" className="hover:underline">Über uns</a></li>
+            <li><a href="#services" className="hover:underline">Dienstleistungen</a></li>
+            <li><a href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin" target="_blank" className="hover:underline">Doctolib</a></li>
+            <li><a href="/privacy" target="_blank" className="hover:underline">Privatsphäre</a></li>
           </ul>
         </div>
-        {/* Address Section */}
+
+        {/* Address & Contact */}
         <div>
           <div>
             <h3 className="font-semibold font-oswald mb-4 text-lg">Adresse</h3>
@@ -67,25 +47,29 @@ const Index = () => {
               Address: Westfälische Str. 72 10709 Berlin
             </a>
           </div>
-
-          {/* Contact Section */}
           <div>
-            <h3 className="font-semibold font-oswald mb-4 text-lg">
-              Kontaktinformationen
-            </h3>
+            <h3 className="font-semibold font-oswald mb-4 text-lg">Kontaktinformationen</h3>
             <p>Phone: 030 44010654</p>
             <p>Phone: 030 44013538</p>
             <p>Fax: 030 43744613</p>
             <p className="hover:underline">
-              Email:{" "}
-              <a href="mailto:info@sam-physio.de" className="">
-                info@sam-physio.de
-              </a>
+              Email: <a href="mailto:info@sam-physio.de">info@sam-physio.de</a>
             </p>
           </div>
         </div>
+
+        {/* Socials Section */}
+        <div>
+          <h3 className="font-semibold font-oswald mb-4 text-lg">Soziale Netzwerke</h3>
+          <ul className="space-y-1">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61575309755352" className="hover:underline" target="_blank">Facebook</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      {/* Berlin Local Time & Developed By Section */}
+
+      {/* Berlin Time & Credit */}
       <div className="mt-24 mb-[50px] text-xs font-semibold md:text-sm grid md:grid-cols-2">
         <p>Berlin Local Time: {isClient ? time : ""}</p>
         <a
