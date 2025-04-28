@@ -252,6 +252,13 @@ export default function page() {
                 <li>Telefonisch: 030 44013538</li>
             </ul>
         </section>
+<section className="mb-8">
+    <h2 className="text-2xl font-bold mb-4 text-gray-900">Links zu externen Websites</h2>
+    <p className="mb-4">
+        Unsere Website enthält Links zu externen Diensten, wie z.B. Doctolib, auf denen Nutzer Termine buchen können. Sobald Sie auf diese Links klicken, werden Sie zu dem jeweiligen externen Dienst weitergeleitet. Bitte beachten Sie, dass wir die Datenerhebungspraktiken dieser Drittanbieter-Websites nicht kontrollieren. Daher wird Ihre personenbezogene Daten, sobald Sie zu Doctolib weitergeleitet werden, gemäß der Datenschutzrichtlinie von Doctolib verarbeitet. Wir empfehlen, deren Datenschutzerklärung zu lesen, bevor Sie personenbezogene Daten weitergeben.
+    </p>
+</section>
+
     </div>
   )
 }
