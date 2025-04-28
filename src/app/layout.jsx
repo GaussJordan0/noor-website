@@ -1,6 +1,7 @@
 import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "lenis/react";
+import Footer from "../components/Footer";
 import DynamicIsland from "../components/DynamicIsland";
 const oswald = Oswald({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         >
           {children}
           <DynamicIsland />
+          <Footer />
         </body>
       </ReactLenis>
     </html>
