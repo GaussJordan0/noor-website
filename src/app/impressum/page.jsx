@@ -8,7 +8,7 @@ import React from "react";
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
-        <p>Sam Therapy</p>
+        <p>Therapiezentrum SAM</p>
         <p>Westfälische Str. 72</p>
         <p>10709 Berlin</p>
         <p>Telefon 1: 030 44010654</p>
@@ -22,11 +22,11 @@ import React from "react";
         <p>Geschäftsführer: Sameh Elbehouti</p>
       </section>
 
-      <section className="mb-8">
+      {/* <section className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Handelsregister & Umsatzsteuer-ID</h2>
-        <p>HRB bei AG [City]: HRB-XXXXX</p> {/* Placeholder for HRB */}
-        <p>USt-ID: DEXXXXXXXXX</p> {/* Placeholder for VAT ID */}
-      </section>
+        <p>HRB bei AG [City]: HRB-XXXXX</p> 
+        <p>USt-ID: DEXXXXXXXXX</p> 
+      </section> */}
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Kontakt Datenschutzbeauftragter</h2>
@@ -37,11 +37,11 @@ import React from "react";
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-2">Haftungsausschluss</h2>
         <p className="mb-4">
-          Trotz sorgfältiger inhaltlicher Kontrolle übernimmt Sam Therapy keine Haftung für die Inhalte externer Links.
+          Trotz sorgfältiger inhaltlicher Kontrolle übernimmt Therapiezentrum SAM keine Haftung für die Inhalte externer Links.
           Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Hiermit distanzieren
           wir uns ausdrücklich von allen Inhalten aller gelinkten Seiten auf unserer Homepage und machen uns diese Inhalte
-          nicht zu eigen. Des Weiteren übernimmt Sam Therapy keinerlei Gewähr darüber, dass die Aktualität, Richtigkeit,
-          Vollständigkeit oder Qualität der bereitgestellten Inhalte auf der Website zu jeder Zeit gegeben ist. Sam Therapy
+          nicht zu eigen. Des Weiteren übernimmt Therapiezentrum SAM keinerlei Gewähr darüber, dass die Aktualität, Richtigkeit,
+          Vollständigkeit oder Qualität der bereitgestellten Inhalte auf der Website zu jeder Zeit gegeben ist. Therapiezentrum SAM
           ist insbesondere in keiner Art verpflichtet, veraltete Informationen oder Meinungen zu aktualisieren, von der
           eigenen Website zu entfernen oder entsprechend zu kennzeichnen. Die auf der Website enthaltenen Informationen
           können jederzeit ohne Ankündigung geändert werden.
