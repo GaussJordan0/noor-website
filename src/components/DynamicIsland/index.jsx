@@ -106,7 +106,7 @@ export default function Index() {
         // onClick={() => setExpanded(!expanded)}
       >
         <div
-          className="  bg-c-mid-green bganimation rounded-2xl w-[90%] mx-auto h-[40px] md:max-w-3xl md:text-2xl "
+          className="  bg-c-mid-green bganimation rounded-2xl w-[90%] mx-auto h-[40px] md:max-w-3xl md:text-2xl overflow-y-auto"
           id="background"
         >
           <div className="flex flex-col w-full h-full ">

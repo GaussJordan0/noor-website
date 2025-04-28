@@ -31,7 +31,8 @@ const Index = () => {
             <li><a href="#about-us" className="hover:underline">Über uns</a></li>
             <li><a href="#services" className="hover:underline">Dienstleistungen</a></li>
             <li><a href="https://www.doctolib.de/physiotherapie/berlin/sameh-elbehouti-berlin" target="_blank" className="hover:underline">Doctolib</a></li>
-            <li><a href="/privacy" target="_blank" className="hover:underline">Privatsphäre</a></li>
+            <li><a href="/Datenschutz" target="_blank" className="hover:underline">Datenschutz</a></li>
+            <li><a href="/impressum" target="_blank" className="hover:underline">Impressum</a></li>
           </ul>
         </div>
 
