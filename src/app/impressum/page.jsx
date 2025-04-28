@@ -48,7 +48,7 @@ import React from "react";
         </p>
       </section>
 
-      <section>
+      <section >
         <h2 className="text-xl font-semibold mb-2">Streitbeilegung</h2>
         <p>
             Wir sind weder verpflichtet noch bereit, an Streitbeteiligungsverfahren vor einer Verbraucherschlichtungsstelle
@@ -56,6 +56,10 @@ import React from "react";
             Fällen zu Unstimmigkeiten, die im Rahmen unseres effektiven Kundenmanagements bearbeitet werden.
         </p>
       </section>
+      <div className="my-4">
+      <a href="/Datenschutz"  className="  text-xl font-semibold underline">Datenschutz</a>
+      </div>
+     
     </main>
   );
 };
