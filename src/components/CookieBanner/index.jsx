@@ -1,6 +1,7 @@
 import React from "react";
 import { useLenis } from "lenis/react";
 export default function Index({ handleClose }) {
+
   const lenis = useLenis();
   React.useEffect(() => {
     lenis?.stop();
@@ -12,7 +13,7 @@ export default function Index({ handleClose }) {
   return (
     <>
       <div className="fixed inset-0  z-[99999999] w-full h-full bg-c-black opacity-70" />
-      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[300px] z-[999999999] gap-10 p-5 rounded-lg text-sm w-[300px] bg-c-black text-c-beige">
+      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[400px] z-[999999999] gap-10 p-5 rounded-lg text-sm w-[350px] bg-c-black text-c-beige">
         <div className="mt-2 flex justify-between  mb-4 w-full  items-center">
           <SvgCookie />
 
@@ -21,21 +22,42 @@ export default function Index({ handleClose }) {
             className="cursor-pointer opacity-60"
           />
         </div>
-        <p className="opacity-60">
-          Diese Website verwendet nur technisch notwendige Cookies, um die
-          Funktionalität zu gewährleisten. Durch die weitere Nutzung stimmen Sie
-          der Verwendung dieser Cookies zu.
-        </p>
+        <div  className="overflow-y-scroll h-[230px]  ">
+          <p className="opacity-60">
+            Diese Website verwendet nur technisch notwendige Cookies, um die
+            Funktionalität zu gewährleisten. Durch die weitere Nutzung stimmen
+            Sie der Verwendung dieser Cookies zu.
+          </p>
+          <hr className="my-4 opacity-60" />
+          <p className="opacity-60">
+            Einige Services verarbeiten personenbezogene Daten in den USA. Mit
+            Ihrer Einwilligung zur Nutzung dieser Services willigen Sie auch in
+            die Verarbeitung Ihrer Daten in den USA gemäß Art. 49 (1) lit. a
+            GDPR ein. Der EuGH stuft die USA als ein Land mit unzureichendem
+            Datenschutz nach EU-Standards ein. Es besteht beispielsweise die
+            Gefahr, dass US-Behörden personenbezogene Daten in
+            Überwachungsprogrammen verarbeiten, ohne dass für Europäerinnen und
+            Europäer eine Klagemöglichkeit besteht.
+          </p>
+        </div>
 
-        <div className="mt-4">
+        <div className="gap-4 flex">
           <button
             onClick={() => {
               localStorage.setItem("cookie-accepted", "true");
               handleClose();
             }}
-            className="bg-c-beige text-c-black px-4 py-2  mt-10 rounded-lg cursor-pointer hover:bg-c-light-green transition-colors duration-300 hover:text-c-black font-semibold"
+            className="bg-c-beige text-c-black px-2 py-1 w-1/2 mt-8 rounded-lg cursor-pointer hover:bg-c-light-green transition-colors duration-300 hover:text-c-black font-semibold"
           >
-            ACCEPT COOKIES
+            AKZEPTIEREN
+          </button>
+          <button
+            onClick={() => {
+              handleClose();
+            }}
+            className="bg-c-beige text-c-black px-4 py-2 mt-8 w-1/2 rounded-lg cursor-pointer hover:bg-c-light-green transition-colors duration-300 hover:text-c-black font-semibold"
+          >
+            ABLEHNEN
           </button>
         </div>
       </div>
