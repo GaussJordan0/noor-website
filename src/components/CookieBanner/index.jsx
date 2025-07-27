@@ -1,7 +1,8 @@
 import React from "react";
-import { useLenis } from "lenis/react";
+import { ReactLenis, useLenis } from "lenis/react";
+import Lenis from "lenis";
 export default function Index({ handleClose }) {
-
+  const newLenis = new Lenis();
   const lenis = useLenis();
   React.useEffect(() => {
     lenis?.stop();
@@ -11,9 +12,9 @@ export default function Index({ handleClose }) {
     };
   }, [lenis]);
   return (
-    <>
+    <ReactLenis allowNestedScroll={true} eventsTarget>
       <div className="fixed inset-0  z-[99999999] w-full h-full bg-c-black opacity-70" />
-      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[400px] z-[999999999] gap-10 p-5 rounded-lg text-sm w-[350px] bg-c-black text-c-beige">
+      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[530px] z-[999999999] gap-10 p-5 rounded-lg text-sm w-[350px] bg-c-black text-c-beige">
         <div className="mt-2 flex justify-between  mb-4 w-full  items-center">
           <SvgCookie />
 
@@ -22,7 +23,7 @@ export default function Index({ handleClose }) {
             className="cursor-pointer opacity-60"
           />
         </div>
-        <div  className="overflow-y-scroll h-[230px]  ">
+        <div className="overflow-y-auto h-[300px]  ">
           <p className="opacity-60">
             Diese Website verwendet nur technisch notwendige Cookies, um die
             Funktionalität zu gewährleisten. Durch die weitere Nutzung stimmen
@@ -60,8 +61,13 @@ export default function Index({ handleClose }) {
             ABLEHNEN
           </button>
         </div>
+        <hr className="mt-8 mb-4 opacity-60" />
+        <div className="flex gap-8 opacity-60">
+          <a href="/Datenschutz">Datenschutz</a>
+          <a href="/impressum">Impressum</a>
+        </div>
       </div>
-    </>
+    </ReactLenis>
   );
 }
 
