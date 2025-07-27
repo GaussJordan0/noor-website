@@ -73,13 +73,13 @@ const Index = () => {
       {/* Berlin Time & Credit */}
       <div className="mt-24 mb-[50px] text-xs font-semibold md:text-sm grid md:grid-cols-2">
         <p>Berlin Local Time: {isClient ? time : ""}</p>
-        <a
+        {/* <a
           className="underline"
           href="https://www.gaussjordan.agency/"
           target="_blank"
         >
           Developed by GaussJordan
-        </a>
+        </a> */}
       </div>
     </footer>
   );
