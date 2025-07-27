@@ -222,11 +222,11 @@ export default function Index() {
                 className="mr-2"
               />
               Ich stimme den{" "}
-              <a href="/privacy" target="_blank" className="underline">
+              <a href="/Datenschutz" target="_blank" className="underline">
                 Datenschutzbestimmungen
               </a>{" "}
               und den{" "}
-              <a href="/privacy" target="_blank" className="underline">
+              <a href="/Datenschutz" target="_blank" className="underline">
                 Nutzungsbedingungen
               </a>{" "}
               zu.
